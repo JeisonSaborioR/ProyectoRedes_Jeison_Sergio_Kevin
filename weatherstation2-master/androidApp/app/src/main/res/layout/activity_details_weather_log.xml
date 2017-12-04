@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tec.weatherstation.DetailsWeatherLog">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg03"
+        android:scaleType = "centerCrop"
+        android:alpha="0.5" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="12dp"
+        android:background="#BFFFFFFF"
+        >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="128sp"
+        android:layout_height="128sp"
+        app:srcCompat="@drawable/all_conditions"
+        android:layout_marginStart="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="24dp" />
+
+    <TextView
+        android:id="@+id/lblDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toEndOf="@+id/txtWinDir"
+        android:text="11/11/2017 06:34"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/lblTempC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="28.5 °C"
+        android:textSize="40sp"
+        android:layout_above="@+id/lblTempF"
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_marginStart="26dp" />
+
+    <TextView
+        android:id="@+id/lblTempF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="83.7 °F"
+        android:textSize="40sp"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_alignStart="@+id/lblTempC" />
+
+    <TextView
+        android:id="@+id/txtAltitudeM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="12dp"
+        android:text="Altitud:"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/lblAltitudeM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtAltitudeM"
+        android:layout_alignStart="@+id/lblTempF"
+        android:text="DeveloperStation"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/txtPressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_below="@+id/txtAltitudeM"
+        android:layout_marginTop="12dp"
+        android:text="Presión:"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/lblPressure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtPressure"
+        android:layout_alignStart="@+id/lblTempF"
+        android:text="DeveloperStation"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/txtHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_below="@+id/txtPressure"
+        android:layout_marginTop="12dp"
+        android:text="Humedad:"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/lblHumidity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtHumidity"
+        android:layout_alignStart="@+id/lblTempF"
+        android:text="DeveloperStation"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/txtLight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_below="@+id/txtHumidity"
+        android:layout_marginTop="12dp"
+        android:text="Luz:"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/lblLight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtLight"
+        android:layout_alignStart="@+id/lblTempF"
+        android:text="DeveloperStation"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/txtWinDir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_below="@+id/txtLight"
+        android:layout_marginTop="12dp"
+        android:text="Dirección viento:"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/lblWinDir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtWinDir"
+        android:layout_alignStart="@+id/lblTempF"
+        android:text="DeveloperStation"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/txtWinSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_below="@+id/txtWinDir"
+        android:layout_marginTop="12dp"
+        android:text="Vel. de viento:"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/lblWinSpeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtWinSpeed"
+        android:layout_alignStart="@+id/lblTempF"
+        android:text="DeveloperStation"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/txtRain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_below="@+id/txtWinSpeed"
+        android:layout_marginTop="12dp"
+        android:text="Precipitación:"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/lblRain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtRain"
+        android:layout_alignStart="@+id/lblTempF"
+        android:text="DeveloperStation"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/txtDailyRain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_below="@+id/txtRain"
+        android:layout_marginTop="12dp"
+        android:text="Precip. diaria:"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/lblDailyRain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtDailyRain"
+        android:layout_alignStart="@+id/lblTempF"
+        android:text="DeveloperStation"
+        android:textSize="18sp"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

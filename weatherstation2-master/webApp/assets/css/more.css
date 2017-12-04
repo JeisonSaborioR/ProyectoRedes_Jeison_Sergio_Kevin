@@ -1,0 +1,43 @@
+.font-size-30 {
+	font-size: 30px;
+}
+
+.font-size-32 {
+	font-size: 32px;
+}
+
+.font-size-40 {
+	font-size: 40px;
+}
+
+.font-size-50 {
+	font-size: 50px;
+}
+
+
+.icon-color {
+	color: #3A6EF0;
+}
+
+.text-column-cell-principal {
+	margin-top: 5%;
+}
+
+.text-column-cell {
+	margin-top: 12.5%;
+}
+
+.column-cell-principal {
+	padding: 5% 5% 10% 5%;
+	text-align: center;
+}
+
+.column-cell-principal-icon {
+	padding: 30% 5% 10% 45%;
+	text-align: center;
+}
+
+.column-cell {
+	padding: 25% 5% 15% 5%;
+	text-align: center;
+}

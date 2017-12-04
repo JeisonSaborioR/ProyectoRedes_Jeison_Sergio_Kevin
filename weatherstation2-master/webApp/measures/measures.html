@@ -1,0 +1,165 @@
+<div>
+    <div id="container_loading" ng-if="!measures.ready">
+        <img id="loading" src="../assets/img/colors.gif">
+    </div>
+</div>
+<div ng-show="measures.ready">
+    <div class="sidebar" data-color="red">
+        <!--
+    
+                Tip 1: you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple"
+                Tip 2: you can also add an image using data-image tag
+    
+            -->
+    
+        <div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="#" class="simple-text">
+                    Weather station
+                </a>
+            </div>
+    
+            <ul class="nav">
+                <li class="active">
+                    <a href="#">
+                        <i class="pe-7s-graph"></i>
+                        <p>Dashboard</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="pe-7s-user"></i>
+                        <p>User Profile</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="pe-7s-note2"></i>
+                        <p>Table List</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-panel">
+        <nav class="navbar navbar-default navbar-fixed">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Dashboard</a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-dashboard"></i>
+                            </a>
+                        </li>
+                    </ul>
+    
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="">
+                                Account
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="container-fluid">
+                <!--<div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Temperature record</h4>
+                                <p class="category">Last samples</p>
+                            </div>
+                            <div class="content">
+                                <div class="ct-chart"></div>
+                                <div class="footer">
+                                    <hr>
+                                    <div class="stats">
+                                        <i class="fa fa-clock-o"></i> Last update 5 seconds ago
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title">Weather station data</h4>
+                                <p class="category">with Arduino, AngularJS, NodeJS and AWS.</p>
+                            </div>
+                            <div class="content table-responsive table-full-width">
+                                <table class="table table-hover table-striped">
+                                    <thead>
+                                        <th>Estación</th>
+                                        <th>Altitud (m)</th>
+                                        <th>Altitud (pies)</th>
+                                        <th>Presión</th>
+                                        <th>Temperatura (C)</th>
+                                        <th>Temperatura (F)</th>
+                                        <th>Humedad</th>
+                                        <th>Luminosidad</th>
+                                        <th>Dirección viento</th>
+                                        <th>Velocidad viento</th>
+                                        <th>Lluvia</th>
+                                        <th>Lluvia diaria</th>
+                                        <th>Fecha</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="item in measures.weatherMeasures">
+                                            <td>{{item.idStation}}</td>
+                                            <td>{{item.altitudeM}}</td>
+                                            <td>{{item.altitudeFt}}</td>
+                                            <td>{{item.pressure}}</td>
+                                            <td>{{item.temperatureC}}'C</td>
+                                            <td>{{item.temperatureF}}'F</td>
+                                            <td>{{item.humidity}}%</td>
+                                            <td>{{item.light}}</td>
+                                            <td>{{item.winddir}}º</td>
+                                            <td>{{item.windspeedmph}} mph</td>
+                                            <td>{{item.rain*0.2794}}mm</td>
+                                            <td>{{item.dailyRain*0.2794}}mm</td>
+                                            <td>{{item.date | date:'medium'}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container-fluid">
+                <nav class="pull-left">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                Home
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <p class="copyright pull-right">
+                    Weather Station.
+                    <a href="#">Araya, Saborío & Zamora</a>
+                    &copy;
+                    <script>document.write(new Date().getFullYear())</script>
+                </p>
+            </div>
+        </footer>
+    </div>
+</div>
+    
